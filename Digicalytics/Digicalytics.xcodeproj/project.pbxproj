@@ -13,6 +13,18 @@
 		BDDD645E1B33764A0008A592 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDD645D1B33764A0008A592 /* Images.xcassets */; };
 		BDDD64611B33764A0008A592 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDD645F1B33764A0008A592 /* LaunchScreen.xib */; };
 		BDDD646D1B33764A0008A592 /* DigicalyticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDD646C1B33764A0008A592 /* DigicalyticsTests.swift */; };
+		BDDD64861B338C2C0008A592 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDD64841B338C2C0008A592 /* Bolts.framework */; };
+		BDDD64871B338C2C0008A592 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDD64851B338C2C0008A592 /* Parse.framework */; };
+		BDDD64891B338C4B0008A592 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDD64881B338C4B0008A592 /* AudioToolbox.framework */; };
+		BDDD648B1B338C520008A592 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDD648A1B338C520008A592 /* CFNetwork.framework */; };
+		BDDD648D1B338C5A0008A592 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDD648C1B338C5A0008A592 /* CoreGraphics.framework */; };
+		BDDD648F1B338C610008A592 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDD648E1B338C610008A592 /* MobileCoreServices.framework */; };
+		BDDD64911B338C660008A592 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDD64901B338C660008A592 /* QuartzCore.framework */; };
+		BDDD64931B338C6B0008A592 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDD64921B338C6B0008A592 /* Security.framework */; };
+		BDDD64951B338C710008A592 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDD64941B338C710008A592 /* StoreKit.framework */; };
+		BDDD64971B338C770008A592 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDD64961B338C770008A592 /* SystemConfiguration.framework */; };
+		BDDD64991B338C8A0008A592 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDD64981B338C8A0008A592 /* libz.dylib */; };
+		BDDD649B1B338C920008A592 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDD649A1B338C920008A592 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +48,18 @@
 		BDDD64661B33764A0008A592 /* DigicalyticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigicalyticsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDD646B1B33764A0008A592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDDD646C1B33764A0008A592 /* DigicalyticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigicalyticsTests.swift; sourceTree = "<group>"; };
+		BDDD64841B338C2C0008A592 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		BDDD64851B338C2C0008A592 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		BDDD64881B338C4B0008A592 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BDDD648A1B338C520008A592 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BDDD648C1B338C5A0008A592 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BDDD648E1B338C610008A592 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		BDDD64901B338C660008A592 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BDDD64921B338C6B0008A592 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BDDD64941B338C710008A592 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BDDD64961B338C770008A592 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BDDD64981B338C8A0008A592 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BDDD649A1B338C920008A592 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +67,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDDD649B1B338C920008A592 /* libsqlite3.dylib in Frameworks */,
+				BDDD64991B338C8A0008A592 /* libz.dylib in Frameworks */,
+				BDDD64971B338C770008A592 /* SystemConfiguration.framework in Frameworks */,
+				BDDD64951B338C710008A592 /* StoreKit.framework in Frameworks */,
+				BDDD64931B338C6B0008A592 /* Security.framework in Frameworks */,
+				BDDD64911B338C660008A592 /* QuartzCore.framework in Frameworks */,
+				BDDD648F1B338C610008A592 /* MobileCoreServices.framework in Frameworks */,
+				BDDD648D1B338C5A0008A592 /* CoreGraphics.framework in Frameworks */,
+				BDDD648B1B338C520008A592 /* CFNetwork.framework in Frameworks */,
+				BDDD64891B338C4B0008A592 /* AudioToolbox.framework in Frameworks */,
+				BDDD64871B338C2C0008A592 /* Parse.framework in Frameworks */,
+				BDDD64861B338C2C0008A592 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +95,16 @@
 		BDDD64481B33764A0008A592 = {
 			isa = PBXGroup;
 			children = (
+				BDDD649A1B338C920008A592 /* libsqlite3.dylib */,
+				BDDD64981B338C8A0008A592 /* libz.dylib */,
+				BDDD64961B338C770008A592 /* SystemConfiguration.framework */,
+				BDDD64941B338C710008A592 /* StoreKit.framework */,
+				BDDD64921B338C6B0008A592 /* Security.framework */,
+				BDDD64901B338C660008A592 /* QuartzCore.framework */,
+				BDDD648E1B338C610008A592 /* MobileCoreServices.framework */,
+				BDDD648C1B338C5A0008A592 /* CoreGraphics.framework */,
+				BDDD648A1B338C520008A592 /* CFNetwork.framework */,
+				BDDD64881B338C4B0008A592 /* AudioToolbox.framework */,
 				BDDD64531B33764A0008A592 /* Digicalytics */,
 				BDDD64691B33764A0008A592 /* DigicalyticsTests */,
 				BDDD64521B33764A0008A592 /* Products */,
@@ -77,6 +123,8 @@
 		BDDD64531B33764A0008A592 /* Digicalytics */ = {
 			isa = PBXGroup;
 			children = (
+				BDDD64841B338C2C0008A592 /* Bolts.framework */,
+				BDDD64851B338C2C0008A592 /* Parse.framework */,
 				BDDD64561B33764A0008A592 /* AppDelegate.swift */,
 				BDDD64581B33764A0008A592 /* ViewController.swift */,
 				BDDD645A1B33764A0008A592 /* Main.storyboard */,
@@ -340,8 +388,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Digicalytics",
+				);
 				INFOPLIST_FILE = Digicalytics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Digicalytics",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -350,8 +406,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Digicalytics",
+				);
 				INFOPLIST_FILE = Digicalytics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Digicalytics",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

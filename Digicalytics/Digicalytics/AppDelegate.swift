@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        Parse.setApplicationId("NWy7FvJWkMAWOva8Ie23YXBSiOhqlcUlofWuVAzw", clientKey: "tAxnT7OlftJwxiIMH2hi2sa64KniSpLBhbmAy8vc")
+        
+        var sensorOne = PFObject(className: "button")
+        sensorOne["sensorID"] = 1
+        sensorOne["type"] = "Door"
+        sensorOne["value"] = 0
+        sensorOne.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                // The object has been saved.
+            } else {
+                println("Save Failed")
+            }
+        }
+        
         return true
     }
 
