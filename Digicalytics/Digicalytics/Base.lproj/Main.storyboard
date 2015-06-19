@@ -1,25 +1,220 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E33b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RJR-zI-e5i">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Timeline Screen-->
+        <scene sceneID="tk2-rs-97I">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lSj-ZM-L0Y" customClass="TimelineScreen" customModule="Digicalytics" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="kaP-Vm-LUF"/>
+                        <viewControllerLayoutGuide type="bottom" id="hfu-q6-1CG"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <view key="view" contentMode="scaleToFill" id="zun-Qf-ZW6">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timeline Screen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhN-8h-r4g">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odd-qx-txg">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Add New Sensor">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OUB-db-gC8" kind="show" id="kc8-ZL-PK3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neB-bY-dRg">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="ShowSensorDetail">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gNO-w4-Tyi" kind="show" id="n3h-uQ-CRU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hfu-q6-1CG" firstAttribute="top" secondItem="Odd-qx-txg" secondAttribute="bottom" constant="20" id="H0p-a3-jZe"/>
+                            <constraint firstItem="neB-bY-dRg" firstAttribute="top" secondItem="kaP-Vm-LUF" secondAttribute="bottom" constant="8" id="ZEF-lS-tjP"/>
+                            <constraint firstItem="Odd-qx-txg" firstAttribute="trailing" secondItem="zun-Qf-ZW6" secondAttribute="trailingMargin" id="gPd-pU-w2R"/>
+                            <constraint firstAttribute="centerY" secondItem="LhN-8h-r4g" secondAttribute="centerY" constant="0.5" id="gkj-5X-ZHH"/>
+                            <constraint firstAttribute="centerX" secondItem="neB-bY-dRg" secondAttribute="centerX" id="tGD-aS-Rzh"/>
+                            <constraint firstAttribute="centerX" secondItem="LhN-8h-r4g" secondAttribute="centerX" constant="-0.5" id="vr6-de-qgH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="LhN-8h-r4g"/>
+                                <exclude reference="Odd-qx-txg"/>
+                                <exclude reference="neB-bY-dRg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="ZEF-lS-tjP"/>
+                                <exclude reference="tGD-aS-Rzh"/>
+                                <exclude reference="gkj-5X-ZHH"/>
+                                <exclude reference="vr6-de-qgH"/>
+                                <exclude reference="gPd-pU-w2R"/>
+                                <exclude reference="H0p-a3-jZe"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="LhN-8h-r4g"/>
+                                <include reference="Odd-qx-txg"/>
+                                <include reference="neB-bY-dRg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ZEF-lS-tjP"/>
+                                <include reference="tGD-aS-Rzh"/>
+                                <include reference="gkj-5X-ZHH"/>
+                                <include reference="vr6-de-qgH"/>
+                                <include reference="gPd-pU-w2R"/>
+                                <include reference="H0p-a3-jZe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="eZK-WL-0Rz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9F-ab-8VU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1255.5" y="339.75"/>
+        </scene>
+        <!--Sensor Detail-->
+        <scene sceneID="V15-o4-IIb">
+            <objects>
+                <viewController id="gNO-w4-Tyi" customClass="SensorDetail" customModule="Digicalytics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kdt-an-3k8"/>
+                        <viewControllerLayoutGuide type="bottom" id="s1Q-4D-DHG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="knT-uu-nxo">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor Detial Screen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="629-59-Dfl">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="629-59-Dfl" secondAttribute="centerY" constant="0.5" id="L7v-8p-fjK"/>
+                            <constraint firstAttribute="centerX" secondItem="629-59-Dfl" secondAttribute="centerX" constant="-0.5" id="hWp-ua-5n2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="629-59-Dfl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="L7v-8p-fjK"/>
+                                <exclude reference="hWp-ua-5n2"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="629-59-Dfl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="L7v-8p-fjK"/>
+                                <include reference="hWp-ua-5n2"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uqE-07-jMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2134.5" y="644.25"/>
+        </scene>
+        <!--Add Sensor Screen-->
+        <scene sceneID="Y3i-5u-6Vg">
+            <objects>
+                <viewController storyboardIdentifier="addNewSensor" id="OUB-db-gC8" customClass="AddSensorScreen" customModule="Digicalytics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yMe-b4-bc4"/>
+                        <viewControllerLayoutGuide type="bottom" id="3c0-al-vGi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2I9-XR-UmT">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Sensor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDa-Lf-Dj6">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R18-PP-hyk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="finishBtn:" destination="OUB-db-gC8" eventType="touchUpInside" id="VW7-vy-Veh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="lDa-Lf-Dj6" secondAttribute="centerX" id="Z1l-eR-atj"/>
+                            <constraint firstAttribute="centerX" secondItem="R18-PP-hyk" secondAttribute="centerX" constant="2.5" id="fgr-Fs-RUs"/>
+                            <constraint firstItem="R18-PP-hyk" firstAttribute="top" secondItem="lDa-Lf-Dj6" secondAttribute="bottom" constant="8" id="osw-Nc-oEi"/>
+                            <constraint firstAttribute="centerY" secondItem="lDa-Lf-Dj6" secondAttribute="centerY" constant="0.5" id="xFx-zb-l9Y"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="lDa-Lf-Dj6"/>
+                                <exclude reference="R18-PP-hyk"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Z1l-eR-atj"/>
+                                <exclude reference="xFx-zb-l9Y"/>
+                                <exclude reference="fgr-Fs-RUs"/>
+                                <exclude reference="osw-Nc-oEi"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="lDa-Lf-Dj6"/>
+                                <include reference="R18-PP-hyk"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Z1l-eR-atj"/>
+                                <include reference="xFx-zb-l9Y"/>
+                                <include reference="fgr-Fs-RUs"/>
+                                <include reference="osw-Nc-oEi"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OGv-WN-LPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2146.5" y="-33.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Oap-2z-nCC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RJR-zI-e5i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n6x-yb-GcS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lSj-ZM-L0Y" kind="relationship" relationship="rootViewController" id="zSm-em-C8h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpz-B5-TAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="337.5" y="339.75"/>
         </scene>
     </scenes>
 </document>
