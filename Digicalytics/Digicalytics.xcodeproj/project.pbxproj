@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22A7A87B1B347FA7002DCE3F /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A7A87A1B347FA7002DCE3F /* bubble.png */; };
 		BDDC10631B3476F100C371BE /* SourceSansPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDDC10611B3476F100C371BE /* SourceSansPro-Light.otf */; };
 		BDDC10641B3476F100C371BE /* SourceSansPro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDDC10621B3476F100C371BE /* SourceSansPro-Semibold.otf */; };
 		BDDD64571B33764A0008A592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDD64561B33764A0008A592 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22A7A87A1B347FA7002DCE3F /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubble.png; path = Images.xcassets/Bubble.imageset/bubble.png; sourceTree = "<group>"; };
 		BDDC10611B3476F100C371BE /* SourceSansPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.otf"; sourceTree = "<group>"; };
 		BDDC10621B3476F100C371BE /* SourceSansPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Semibold.otf"; sourceTree = "<group>"; };
 		BDDD64511B33764A0008A592 /* Digicalytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digicalytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 		BDDD64531B33764A0008A592 /* Digicalytics */ = {
 			isa = PBXGroup;
 			children = (
+				22A7A87A1B347FA7002DCE3F /* bubble.png */,
 				BDDD64841B338C2C0008A592 /* Bolts.framework */,
 				BDDD64851B338C2C0008A592 /* Parse.framework */,
 				BDDD64561B33764A0008A592 /* AppDelegate.swift */,
@@ -258,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A7A87B1B347FA7002DCE3F /* bubble.png in Resources */,
 				BDDD645C1B33764A0008A592 /* Main.storyboard in Resources */,
 				BDDD64A51B33B8F70008A592 /* vwTblCell.xib in Resources */,
 				BDDD64611B33764A0008A592 /* LaunchScreen.xib in Resources */,
