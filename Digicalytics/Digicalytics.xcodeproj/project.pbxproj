@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDDC10631B3476F100C371BE /* SourceSansPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDDC10611B3476F100C371BE /* SourceSansPro-Light.otf */; };
+		BDDC10641B3476F100C371BE /* SourceSansPro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDDC10621B3476F100C371BE /* SourceSansPro-Semibold.otf */; };
 		BDDD64571B33764A0008A592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDD64561B33764A0008A592 /* AppDelegate.swift */; };
 		BDDD645C1B33764A0008A592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDD645A1B33764A0008A592 /* Main.storyboard */; };
 		BDDD645E1B33764A0008A592 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDD645D1B33764A0008A592 /* Images.xcassets */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BDDC10611B3476F100C371BE /* SourceSansPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.otf"; sourceTree = "<group>"; };
+		BDDC10621B3476F100C371BE /* SourceSansPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Semibold.otf"; sourceTree = "<group>"; };
 		BDDD64511B33764A0008A592 /* Digicalytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digicalytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDD64551B33764A0008A592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDDD64561B33764A0008A592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 		BDDD64541B33764A0008A592 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BDDC10611B3476F100C371BE /* SourceSansPro-Light.otf */,
+				BDDC10621B3476F100C371BE /* SourceSansPro-Semibold.otf */,
 				BDDD64551B33764A0008A592 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -255,6 +261,8 @@
 				BDDD645C1B33764A0008A592 /* Main.storyboard in Resources */,
 				BDDD64A51B33B8F70008A592 /* vwTblCell.xib in Resources */,
 				BDDD64611B33764A0008A592 /* LaunchScreen.xib in Resources */,
+				BDDC10631B3476F100C371BE /* SourceSansPro-Light.otf in Resources */,
+				BDDC10641B3476F100C371BE /* SourceSansPro-Semibold.otf in Resources */,
 				BDDD645E1B33764A0008A592 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +500,7 @@
 				BDDD64721B33764A0008A592 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDDD64731B33764A0008A592 /* Build configuration list for PBXNativeTarget "DigicalyticsTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +509,7 @@
 				BDDD64751B33764A0008A592 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
