@@ -76,13 +76,13 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:customTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as customTableViewCell
+        var cell:customTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! customTableViewCell
         
 
         var button = self.buttons[indexPath.row]
         cell.timeLbl.text = self.formatter.stringFromDate(button.createdAt)
         cell.sensorActionLbl.attributedText = makeAttributed(button.sensorID)
-        cell.backgroundImage.image = UIImage(named: "")
+        cell.backgroundColor = UIColor.clearColor()
         //  ["OpenDoor", "Open Cabinet", "Turn On Light", "Take Medicine"]
         return cell
     }
@@ -101,7 +101,7 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
 
         let range = old.rangeOfString(" ")
         
-        let s = NSMutableAttributedString(string: old, attributes: attrs)
+        let s = NSMutableAttributedString(string: old as String, attributes: attrs)
         s.setAttributes(subAttrs, range: range)
         return s
     }
@@ -127,7 +127,7 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
             if let objects = objects as? [PFObject] {
                 for object in objects {
                     println(object)
-                    buttons.append(Button(sensorID: object["sensorID"] as Int, createdAt: object.createdAt))
+                    buttons.append(Button(sensorID: object["sensorID"] as! Int, createdAt: object.createdAt!))
                 }
             }
             self.buttons = buttons
@@ -140,7 +140,8 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
 
         let query = PFQuery(className: "button")
         if let first = self.buttons.first {
-            query.whereKey("createdAt", greaterThan: first)
+            query.whereKey("createdAt", greaterThan: first.createdAt) // causing crash
+    
         }
         else {
             return
@@ -152,9 +153,9 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
             if error != nil {
                 println("could not fetch new parse data.")
             }
-            for object in objects as [PFObject] {
+            for object in objects as! [PFObject] {
                 if let object = objects?.first as? PFObject {
-                    self.buttons.insert(Button(sensorID: object["sensorId"] as Int, createdAt: object.createdAt), atIndex: 0)
+                    self.buttons.insert(Button(sensorID: object["sensorID"] as! Int, createdAt: object.createdAt!), atIndex: 0)
                     self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
             }
         }
