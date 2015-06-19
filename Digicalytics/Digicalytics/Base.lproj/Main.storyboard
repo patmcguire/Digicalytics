@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E33b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RJR-zI-e5i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RJR-zI-e5i">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -14,9 +15,10 @@
                         <viewControllerLayoutGuide type="bottom" id="hfu-q6-1CG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zun-Qf-ZW6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="i48-9e-c9e">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="i48-9e-c9e">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -54,11 +56,11 @@
                                                     <exclude reference="QmQ-ye-9HQ"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="ei7-fv-cny"/>
-                                                    <exclude reference="tAG-qm-O3C"/>
                                                     <exclude reference="8CX-O3-4yt"/>
                                                     <exclude reference="NdA-YW-tl1"/>
                                                     <exclude reference="WSJ-wY-uu6"/>
+                                                    <exclude reference="ei7-fv-cny"/>
+                                                    <exclude reference="tAG-qm-O3C"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -67,11 +69,11 @@
                                                     <include reference="QmQ-ye-9HQ"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="ei7-fv-cny"/>
-                                                    <include reference="tAG-qm-O3C"/>
                                                     <include reference="8CX-O3-4yt"/>
                                                     <include reference="NdA-YW-tl1"/>
                                                     <include reference="WSJ-wY-uu6"/>
+                                                    <include reference="ei7-fv-cny"/>
+                                                    <include reference="tAG-qm-O3C"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -151,6 +153,7 @@
                                 <exclude reference="yz9-yO-5gS"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="8qQ-JY-MrW"/>
                                 <exclude reference="6KJ-HC-f5k"/>
                                 <exclude reference="S5W-fy-3TM"/>
                                 <exclude reference="a7K-ku-mah"/>
@@ -159,7 +162,6 @@
                                 <exclude reference="Mqy-yV-R6O"/>
                                 <exclude reference="Vnw-It-sad"/>
                                 <exclude reference="ZjJ-Sm-Qq1"/>
-                                <exclude reference="8qQ-JY-MrW"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -168,6 +170,7 @@
                                 <include reference="yz9-yO-5gS"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="8qQ-JY-MrW"/>
                                 <include reference="6KJ-HC-f5k"/>
                                 <include reference="S5W-fy-3TM"/>
                                 <include reference="a7K-ku-mah"/>
@@ -176,7 +179,6 @@
                                 <include reference="Mqy-yV-R6O"/>
                                 <include reference="Vnw-It-sad"/>
                                 <include reference="ZjJ-Sm-Qq1"/>
-                                <include reference="8qQ-JY-MrW"/>
                             </mask>
                         </variation>
                     </view>
@@ -198,6 +200,7 @@
                         <viewControllerLayoutGuide type="bottom" id="s1Q-4D-DHG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="knT-uu-nxo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor Detial Screen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="629-59-Dfl">
@@ -245,6 +248,7 @@
                         <viewControllerLayoutGuide type="bottom" id="3c0-al-vGi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2I9-XR-UmT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Sensor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDa-Lf-Dj6">

@@ -31,6 +31,18 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
     
 //    var sensorAction = ["Ready for Demo","","","Start Panicking","","Feeling confident","","Arguing","Beer Fridge","","","","","","","Go to Sleep","","","Leave work","",""]
     
+    func setBackground() {
+    
+    let backgroundImageView : UIImageView = UIImageView()
+    
+    self.view.addSubview(backgroundImageView)
+    
+    TimelineScreen.inflateView(backgroundImageView, toParent: self.view)
+    
+    backgroundImageView.image = UIImage(named: "event_background");
+    
+    
+    }
     
     func getParseData() {
         var query = PFQuery(className:"button")
@@ -115,7 +127,10 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = UIColor.clearColor()
         
+        self.setBackground()
+//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "event_background")!)
         
         var nib = UINib(nibName: "vwTblCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
@@ -136,6 +151,7 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
         
         var cell:customTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! customTableViewCell
         
+        cell.backgroundColor = UIColor.clearColor()
         
 //        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
         
@@ -168,6 +184,21 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func addSensor(sender: AnyObject) {
         println("Add Button Pressed!")
+    }
+    
+    /// "Inflates" the given view to fill the given parentView.
+    ///
+    /// It's advised to have the view as the sole child of the parentView.
+    ///
+    /// :param: view The child view to "inflate"
+    /// :param: parentView The parent to which the child will fill.
+    class func inflateView(view: UIView, toParent parentView: UIView) {
+        
+        view.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        parentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[view]-0-|", options: NSLayoutFormatOptions.DirectionLeadingToTrailing, metrics: nil, views: ["view":view]))
+        
+        parentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[view]-0-|", options: NSLayoutFormatOptions.DirectionLeadingToTrailing, metrics: nil, views: ["view":view]))
     }
     
 }
