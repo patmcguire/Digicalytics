@@ -21,6 +21,10 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var heightHeader: NSLayoutConstraint!
+    
+    @IBOutlet weak var header: UIImageView!
+    
     let textCellIdentifier = "sensorDataCell"
     
     func setBackground() {
@@ -51,20 +55,32 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
         
         parentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[view]-0-|", options: NSLayoutFormatOptions.DirectionLeadingToTrailing, metrics: nil, views: ["view":view]))
     }
-    
+    override func prefersStatusBarHidden() -> Bool {
+        
+        return true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clearColor()
       
         self.setBackground()
 
+        heightHeader.constant = 240
+        self.setHeader()
+
         var nib = UINib(nibName: "vwTblCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         
         getParseData()
+    }
+    
+    func setHeader() {
+    
+        header.image = UIImage(named: "header")
+    
+    
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -100,6 +116,7 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+
     //MARK: - UIButton Delegates
     
     func makeAttributed(old : NSString) -> NSMutableAttributedString {
