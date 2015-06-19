@@ -83,7 +83,20 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.timeLbl.text = self.formatter.stringFromDate(button.createdAt)
         cell.sensorActionLbl.attributedText = makeAttributed(button.sensorID)
         cell.backgroundColor = UIColor.clearColor()
-        //  ["OpenDoor", "Open Cabinet", "Turn On Light", "Take Medicine"]
+
+        var filename : String
+        switch(button.sensorIdx) {
+        case 0:
+            filename = "ic_Door"
+        case 1:
+            filename = "ic_Light"
+        case 2:
+            filename = "ic_Medicine"
+        default:
+            filename = "ic_Cabinet"
+        }
+        cell.imageView!.image = UIImage(named: filename)
+        
         return cell
     }
     
@@ -159,7 +172,6 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
                     self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
             }
         }
-
     }
     }
 }
@@ -170,7 +182,7 @@ class Button {
     let createdAt: NSDate
     let sensorIdx: Int
     init(sensorID : Int, createdAt: NSDate) {
-        self.sensorID = ["OpenDoor", "Open Cabinet", "Turn On Light", "Take Medicine"][sensorID]
+        self.sensorID = ["OpenDoor", "Turn On Light", "Take Medicine", "Open Cabinet"][sensorID]
         self.createdAt = createdAt
         self.sensorIdx = sensorID
     }

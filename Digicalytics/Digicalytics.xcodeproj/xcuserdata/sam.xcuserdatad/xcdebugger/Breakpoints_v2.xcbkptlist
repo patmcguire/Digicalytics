@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "144"
             endingLineNumber = "144"
-            landmarkName = "getNewParseData()"
+            landmarkName = "getParseData()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
