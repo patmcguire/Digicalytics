@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E33b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2pc-9T-JNQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2pc-9T-JNQ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -179,6 +179,7 @@
                                 <exclude reference="yz9-yO-5gS"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="8qQ-JY-MrW"/>
                                 <exclude reference="2VS-nK-vst"/>
                                 <exclude reference="6KJ-HC-f5k"/>
                                 <exclude reference="S5W-fy-3TM"/>
@@ -189,7 +190,6 @@
                                 <exclude reference="Vnw-It-sad"/>
                                 <exclude reference="ZjJ-Sm-Qq1"/>
                                 <exclude reference="qnp-v3-uer"/>
-                                <exclude reference="8qQ-JY-MrW"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -198,6 +198,7 @@
                                 <include reference="yz9-yO-5gS"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="8qQ-JY-MrW"/>
                                 <include reference="2VS-nK-vst"/>
                                 <include reference="6KJ-HC-f5k"/>
                                 <exclude reference="S5W-fy-3TM"/>
@@ -208,7 +209,6 @@
                                 <exclude reference="Vnw-It-sad"/>
                                 <include reference="ZjJ-Sm-Qq1"/>
                                 <include reference="qnp-v3-uer"/>
-                                <include reference="8qQ-JY-MrW"/>
                             </mask>
                         </variation>
                     </view>
