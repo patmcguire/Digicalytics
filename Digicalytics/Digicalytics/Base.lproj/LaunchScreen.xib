@@ -10,37 +10,62 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TadPull" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="140" width="441" height="43"/>
-                    <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="63"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="20" y="359" width="441" height="43"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whitelogo" translatesAutoresizingMaskIntoConstraints="NO" id="AjK-2C-LsU">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="214" id="Tx1-Wd-gCb"/>
+                        <constraint firstAttribute="width" constant="374" id="XUA-T2-2oM"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Tx1-Wd-gCb"/>
+                            <exclude reference="XUA-T2-2oM"/>
+                        </mask>
                     </variation>
-                </label>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Tx1-Wd-gCb"/>
+                            <include reference="XUA-T2-2oM"/>
+                        </mask>
+                    </variation>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.053295968489999998" green="0.60239109850000006" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.2627450980392157" green="0.68235294117647061" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
             <color key="tintColor" red="0.053295968485756212" green="0.60239109848484851" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" constant="-0.5" id="k4O-hP-yJy"/>
-                <constraint firstAttribute="centerY" secondItem="kId-c2-rCX" secondAttribute="centerY" constant="0.5" id="zRU-fd-I1j"/>
+                <constraint firstAttribute="trailing" secondItem="AjK-2C-LsU" secondAttribute="trailing" constant="60" id="8uF-lG-fUz"/>
+                <constraint firstAttribute="centerY" secondItem="AjK-2C-LsU" secondAttribute="centerY" constant="0.5" id="HA4-Wv-hML"/>
+                <constraint firstAttribute="centerX" secondItem="AjK-2C-LsU" secondAttribute="centerX" id="IKO-Gx-fby"/>
+                <constraint firstItem="AjK-2C-LsU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="60" id="exu-lt-Lms"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="AjK-2C-LsU"/>
+                </mask>
                 <mask key="constraints">
-                    <exclude reference="k4O-hP-yJy"/>
-                    <exclude reference="zRU-fd-I1j"/>
+                    <exclude reference="8uF-lG-fUz"/>
+                    <exclude reference="HA4-Wv-hML"/>
+                    <exclude reference="IKO-Gx-fby"/>
+                    <exclude reference="exu-lt-Lms"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="AjK-2C-LsU"/>
+                </mask>
                 <mask key="constraints">
-                    <include reference="k4O-hP-yJy"/>
-                    <include reference="zRU-fd-I1j"/>
+                    <include reference="8uF-lG-fUz"/>
+                    <include reference="HA4-Wv-hML"/>
+                    <include reference="IKO-Gx-fby"/>
+                    <include reference="exu-lt-Lms"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="548" y="596"/>
+            <point key="canvasLocation" x="555" y="730"/>
         </view>
     </objects>
+    <resources>
+        <image name="whitelogo" width="900" height="306"/>
+    </resources>
 </document>
