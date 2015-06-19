@@ -27,6 +27,8 @@
 		BDDD649D1B3395E00008A592 /* TimelineScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDD649C1B3395E00008A592 /* TimelineScreen.swift */; };
 		BDDD649F1B3395F10008A592 /* AddSensorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDD649E1B3395F10008A592 /* AddSensorScreen.swift */; };
 		BDDD64A11B339CE00008A592 /* sensorDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDD64A01B339CE00008A592 /* sensorDetails.swift */; };
+		BDDD64A31B33B66B0008A592 /* tableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDD64A21B33B66B0008A592 /* tableViewCell.swift */; };
+		BDDD64A51B33B8F70008A592 /* vwTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDD64A41B33B8F70008A592 /* vwTblCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		BDDD649C1B3395E00008A592 /* TimelineScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineScreen.swift; sourceTree = "<group>"; };
 		BDDD649E1B3395F10008A592 /* AddSensorScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSensorScreen.swift; sourceTree = "<group>"; };
 		BDDD64A01B339CE00008A592 /* sensorDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sensorDetails.swift; sourceTree = "<group>"; };
+		BDDD64A21B33B66B0008A592 /* tableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableViewCell.swift; sourceTree = "<group>"; };
+		BDDD64A41B33B8F70008A592 /* vwTblCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vwTblCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +135,10 @@
 				BDDD64851B338C2C0008A592 /* Parse.framework */,
 				BDDD64561B33764A0008A592 /* AppDelegate.swift */,
 				BDDD645A1B33764A0008A592 /* Main.storyboard */,
+				BDDD64A41B33B8F70008A592 /* vwTblCell.xib */,
 				BDDD649C1B3395E00008A592 /* TimelineScreen.swift */,
 				BDDD64A01B339CE00008A592 /* sensorDetails.swift */,
+				BDDD64A21B33B66B0008A592 /* tableViewCell.swift */,
 				BDDD649E1B3395F10008A592 /* AddSensorScreen.swift */,
 				BDDD645D1B33764A0008A592 /* Images.xcassets */,
 				BDDD645F1B33764A0008A592 /* LaunchScreen.xib */,
@@ -247,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDD645C1B33764A0008A592 /* Main.storyboard in Resources */,
+				BDDD64A51B33B8F70008A592 /* vwTblCell.xib in Resources */,
 				BDDD64611B33764A0008A592 /* LaunchScreen.xib in Resources */,
 				BDDD645E1B33764A0008A592 /* Images.xcassets in Resources */,
 			);
@@ -267,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDD649D1B3395E00008A592 /* TimelineScreen.swift in Sources */,
+				BDDD64A31B33B66B0008A592 /* tableViewCell.swift in Sources */,
 				BDDD64571B33764A0008A592 /* AppDelegate.swift in Sources */,
 				BDDD64A11B339CE00008A592 /* sensorDetails.swift in Sources */,
 				BDDD649F1B3395F10008A592 /* AddSensorScreen.swift in Sources */,

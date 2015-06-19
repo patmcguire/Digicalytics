@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E33b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="oVf-Ud-CQf" customClass="customTableViewCell" customModule="Digicalytics" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oVf-Ud-CQf" id="pKG-J6-vFg">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DPf-kn-rA1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSy-rS-Bhu">
+                        <rect key="frame" x="8" y="11" width="34" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sensor action" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUS-bh-Gof">
+                        <rect key="frame" x="208" y="11" width="104" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="GUS-bh-Gof" secondAttribute="centerY" id="1Vq-zm-Wij"/>
+                    <constraint firstItem="DPf-kn-rA1" firstAttribute="leading" secondItem="pKG-J6-vFg" secondAttribute="leadingMargin" constant="-8" id="3RD-8q-7DC"/>
+                    <constraint firstItem="rSy-rS-Bhu" firstAttribute="leading" secondItem="pKG-J6-vFg" secondAttribute="leadingMargin" id="6YN-eH-1xd"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="DPf-kn-rA1" secondAttribute="trailing" constant="-8" id="8wc-Rc-a1G"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="DPf-kn-rA1" secondAttribute="bottom" constant="-8" id="B5c-sU-hER"/>
+                    <constraint firstItem="GUS-bh-Gof" firstAttribute="trailing" secondItem="pKG-J6-vFg" secondAttribute="trailingMargin" id="Jwc-UQ-wKG"/>
+                    <constraint firstAttribute="centerY" secondItem="rSy-rS-Bhu" secondAttribute="centerY" id="NJl-sg-7fD"/>
+                    <constraint firstItem="DPf-kn-rA1" firstAttribute="top" secondItem="pKG-J6-vFg" secondAttribute="topMargin" constant="-8" id="Vj1-IB-JuR"/>
+                    <constraint firstItem="GUS-bh-Gof" firstAttribute="top" secondItem="pKG-J6-vFg" secondAttribute="topMargin" constant="3" id="hAq-0b-J4D"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="backgroundImage" destination="DPf-kn-rA1" id="nQ1-hN-p0D"/>
+                <outlet property="sensorActionLbl" destination="GUS-bh-Gof" id="DUg-de-yMg"/>
+                <outlet property="timeLbl" destination="rSy-rS-Bhu" id="DpR-LN-4rF"/>
+            </connections>
+            <point key="canvasLocation" x="-147" y="288"/>
+        </tableViewCell>
+    </objects>
+</document>
