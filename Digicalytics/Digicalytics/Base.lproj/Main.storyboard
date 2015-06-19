@@ -16,15 +16,6 @@
                     <view key="view" contentMode="scaleToFill" id="zun-Qf-ZW6">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odd-qx-txg">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Add New Sensor">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="OUB-db-gC8" kind="show" id="kc8-ZL-PK3"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="i48-9e-c9e">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,6 +36,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="146" y="11" width="108" height="21"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -83,48 +77,105 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="147" width="400" height="653"/>
-                                </variation>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yz9-yO-5gS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odd-qx-txg">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IYO-dm-8DK"/>
+                                        </constraints>
+                                        <state key="normal" title="Add New Sensor">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="IYO-dm-8DK"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="IYO-dm-8DK"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="addSensor:" destination="lSj-ZM-L0Y" eventType="touchUpInside" id="0xz-OQ-0Hb"/>
+                                            <segue destination="OUB-db-gC8" kind="show" id="kc8-ZL-PK3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.053295968489999998" green="0.60239109850000006" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Odd-qx-txg" firstAttribute="leading" secondItem="yz9-yO-5gS" secondAttribute="leading" id="3gg-D7-HYz"/>
+                                    <constraint firstItem="Odd-qx-txg" firstAttribute="top" secondItem="yz9-yO-5gS" secondAttribute="top" id="IKL-5O-Ged"/>
+                                    <constraint firstAttribute="trailing" secondItem="Odd-qx-txg" secondAttribute="trailing" constant="10" id="aoh-d6-2bO"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Odd-qx-txg"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="3gg-D7-HYz"/>
+                                        <exclude reference="IKL-5O-Ged"/>
+                                        <exclude reference="aoh-d6-2bO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="Odd-qx-txg"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="3gg-D7-HYz"/>
+                                        <include reference="IKL-5O-Ged"/>
+                                        <include reference="aoh-d6-2bO"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Odd-qx-txg" firstAttribute="top" secondItem="kaP-Vm-LUF" secondAttribute="bottom" id="20M-GM-Ftv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i48-9e-c9e" secondAttribute="trailing" id="6KJ-HC-f5k"/>
                             <constraint firstItem="hfu-q6-1CG" firstAttribute="top" secondItem="i48-9e-c9e" secondAttribute="bottom" id="8qQ-JY-MrW"/>
+                            <constraint firstAttribute="trailing" secondItem="yz9-yO-5gS" secondAttribute="trailing" id="Mqy-yV-R6O"/>
+                            <constraint firstItem="i48-9e-c9e" firstAttribute="top" secondItem="yz9-yO-5gS" secondAttribute="bottom" id="S5W-fy-3TM"/>
+                            <constraint firstItem="yz9-yO-5gS" firstAttribute="top" secondItem="kaP-Vm-LUF" secondAttribute="bottom" id="Vnw-It-sad"/>
+                            <constraint firstItem="yz9-yO-5gS" firstAttribute="leading" secondItem="zun-Qf-ZW6" secondAttribute="leading" id="ZjJ-Sm-Qq1"/>
                             <constraint firstItem="i48-9e-c9e" firstAttribute="leading" secondItem="zun-Qf-ZW6" secondAttribute="leadingMargin" id="a7K-ku-mah"/>
-                            <constraint firstItem="Odd-qx-txg" firstAttribute="trailing" secondItem="zun-Qf-ZW6" secondAttribute="trailingMargin" id="gPd-pU-w2R"/>
                             <constraint firstAttribute="centerX" secondItem="i48-9e-c9e" secondAttribute="centerX" id="hHR-2H-sRz"/>
                             <constraint firstItem="i48-9e-c9e" firstAttribute="top" secondItem="kaP-Vm-LUF" secondAttribute="bottom" constant="83" id="tCW-qf-l9Y"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Odd-qx-txg"/>
                                 <exclude reference="i48-9e-c9e"/>
+                                <exclude reference="yz9-yO-5gS"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="6KJ-HC-f5k"/>
+                                <exclude reference="S5W-fy-3TM"/>
                                 <exclude reference="a7K-ku-mah"/>
                                 <exclude reference="hHR-2H-sRz"/>
                                 <exclude reference="tCW-qf-l9Y"/>
-                                <exclude reference="20M-GM-Ftv"/>
-                                <exclude reference="gPd-pU-w2R"/>
+                                <exclude reference="Mqy-yV-R6O"/>
+                                <exclude reference="Vnw-It-sad"/>
+                                <exclude reference="ZjJ-Sm-Qq1"/>
                                 <exclude reference="8qQ-JY-MrW"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Odd-qx-txg"/>
                                 <include reference="i48-9e-c9e"/>
+                                <include reference="yz9-yO-5gS"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="6KJ-HC-f5k"/>
+                                <include reference="S5W-fy-3TM"/>
                                 <include reference="a7K-ku-mah"/>
                                 <include reference="hHR-2H-sRz"/>
                                 <include reference="tCW-qf-l9Y"/>
-                                <include reference="20M-GM-Ftv"/>
-                                <include reference="gPd-pU-w2R"/>
+                                <include reference="Mqy-yV-R6O"/>
+                                <include reference="Vnw-It-sad"/>
+                                <include reference="ZjJ-Sm-Qq1"/>
                                 <include reference="8qQ-JY-MrW"/>
                             </mask>
                         </variation>
