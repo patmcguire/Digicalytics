@@ -23,12 +23,44 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
     
     let textCellIdentifier = "sensorDataCell"
     
+    func setBackground() {
+        
+        let backgroundImageView : UIImageView = UIImageView()
+        
+        self.view.addSubview(backgroundImageView)
+        
+        self.inflateView(backgroundImageView, toParent: self.view)
+        
+        backgroundImageView.image = UIImage(named: "event_background");
+        
+        
+    }
+    
+    
+    /// "Inflates" the given view to fill the given parentView.
+    ///
+    /// It's advised to have the view as the sole child of the parentView.
+    ///
+    /// :param: view The child view to "inflate"
+    /// :param: parentView The parent to which the child will fill.
+    func inflateView(view: UIView, toParent parentView: UIView) {
+        
+        view.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        parentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[view]-0-|", options: NSLayoutFormatOptions.DirectionLeadingToTrailing, metrics: nil, views: ["view":view]))
+        
+        parentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[view]-0-|", options: NSLayoutFormatOptions.DirectionLeadingToTrailing, metrics: nil, views: ["view":view]))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-        
+        tableView.backgroundColor = UIColor.clearColor()
+      
+        self.setBackground()
+
         var nib = UINib(nibName: "vwTblCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         
@@ -46,10 +78,12 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:customTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as customTableViewCell
         
+
         var button = self.buttons[indexPath.row]
         cell.timeLbl.text = self.formatter.stringFromDate(button.createdAt)
         cell.sensorActionLbl.attributedText = makeAttributed(button.sensorID)
-        
+        cell.backgroundImage.image = UIImage(named: "")
+        //  ["OpenDoor", "Open Cabinet", "Turn On Light", "Take Medicine"]
         return cell
     }
     
@@ -76,6 +110,7 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
         println("Add Button Pressed!")
     }
     
+
     func getParseData() {
         
         var query = PFQuery(className:"button")
@@ -100,6 +135,7 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: "getNewParseData", userInfo: nil, repeats: true)
     }
+    
     func getNewParseData(){
 
         let query = PFQuery(className: "button")
@@ -124,13 +160,17 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
         }
 
     }
+    }
 }
-}
+
+
 class Button {
     let sensorID : String
     let createdAt: NSDate
+    let sensorIdx: Int
     init(sensorID : Int, createdAt: NSDate) {
         self.sensorID = ["OpenDoor", "Open Cabinet", "Turn On Light", "Take Medicine"][sensorID]
         self.createdAt = createdAt
+        self.sensorIdx = sensorID
     }
 }
