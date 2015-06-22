@@ -21,6 +21,10 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var heightHeader: NSLayoutConstraint!
+    
+    @IBOutlet weak var header: UIImageView!
+    
     let textCellIdentifier = "sensorDataCell"
     
     func setBackground() {
@@ -51,20 +55,33 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
         
         parentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[view]-0-|", options: NSLayoutFormatOptions.DirectionLeadingToTrailing, metrics: nil, views: ["view":view]))
     }
-    
+    override func prefersStatusBarHidden() -> Bool {
+        
+        return true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clearColor()
-      
+        tableView.allowsSelection = false
+        
         self.setBackground()
+
+        heightHeader.constant = 240
+        self.setHeader()
 
         var nib = UINib(nibName: "vwTblCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         
         getParseData()
+    }
+    
+    func setHeader() {
+    
+        header.image = UIImage(named: "header")
+    
+    
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -76,15 +93,14 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:customTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as customTableViewCell
+        var cell:customTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! customTableViewCell
         
 
         var button = self.buttons[indexPath.row]
         cell.timeLbl.text = self.formatter.stringFromDate(button.createdAt)
         cell.sensorActionLbl.attributedText = makeAttributed(button.sensorID)
         cell.backgroundColor = UIColor.clearColor()
-        
-        
+
         var filename : String
         switch(button.sensorIdx) {
         case 0:
@@ -96,25 +112,32 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
         default:
             filename = "ic_Cabinet"
         }
-        cell.imageView.image = UIImage(named: filename)
+        cell.imageView!.image = UIImage(named: filename)
+        
         return cell
     }
-    
+
     //MARK: - UIButton Delegates
     
     func makeAttributed(old : NSString) -> NSMutableAttributedString {
 
 
-        let fontSize : CGFloat = 13.0;
-        let boldFont = UIFont.boldSystemFontOfSize(fontSize)
-        let regularFont = UIFont.systemFontOfSize(fontSize)
-        let foregroundColor = UIColor.blackColor()
-        let attrs = [NSFontAttributeName : boldFont, NSForegroundColorAttributeName : foregroundColor]
-        let subAttrs = [NSFontAttributeName : regularFont]
+        let fontSize : CGFloat = 16.0;
 
-        let range = old.rangeOfString(" ")
+        let regularFont = UIFont(name: "SourceSansPro-Light", size: fontSize)!
+        let boldFont = UIFont(name: "SourceSansPro-Light", size: fontSize)!
+        let foregroundColor = UIColor.grayColor()
+        let attrs = [NSFontAttributeName : regularFont, NSForegroundColorAttributeName : foregroundColor]
+        let subAttrs = [NSFontAttributeName : boldFont]
+
+        //let range = old.rangeOfString(" ")
+        let words = old.componentsSeparatedByString(" ")
+        let first = words.first as! String
+        let lengths = count(first)
         
-        let s = NSMutableAttributedString(string: old, attributes: attrs)
+        let range = NSMakeRange(0, lengths)
+
+        let s = NSMutableAttributedString(string: old as String, attributes: attrs)
         s.setAttributes(subAttrs, range: range)
         return s
     }
@@ -140,7 +163,7 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
             if let objects = objects as? [PFObject] {
                 for object in objects {
                     println(object)
-                    buttons.append(Button(sensorID: object["sensorID"] as Int, createdAt: object.createdAt))
+                    buttons.append(Button(sensorID: object["sensorID"] as! Int, createdAt: object.createdAt!))
                 }
             }
             self.buttons = buttons
@@ -153,7 +176,8 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
 
         let query = PFQuery(className: "button")
         if let first = self.buttons.first {
-            query.whereKey("createdAt", greaterThan: first)
+            query.whereKey("createdAt", greaterThan: first.createdAt) // causing crash
+    
         }
         else {
             return
@@ -165,9 +189,9 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
             if error != nil {
                 println("could not fetch new parse data.")
             }
-            for object in objects as [PFObject] {
+            for object in objects as! [PFObject] {
                 if let object = objects?.first as? PFObject {
-                    self.buttons.insert(Button(sensorID: object["sensorId"] as Int, createdAt: object.createdAt), atIndex: 0)
+                    self.buttons.insert(Button(sensorID: object["sensorID"] as! Int, createdAt: object.createdAt!), atIndex: 0)
                     self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
             }
         }
@@ -181,7 +205,7 @@ class Button {
     let createdAt: NSDate
     let sensorIdx: Int
     init(sensorID : Int, createdAt: NSDate) {
-        self.sensorID = ["OpenDoor", "Turn On Light", "Take Medicine", "Open Cabinet"][sensorID]
+        self.sensorID = ["Open Door", "Turn On Light", "Take Medicine", "Open Cabinet"][sensorID]
         self.createdAt = createdAt
         self.sensorIdx = sensorID
     }

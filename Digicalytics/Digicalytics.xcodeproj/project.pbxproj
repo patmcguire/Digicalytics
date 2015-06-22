@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22A3042D1B3499C9009A3652 /* SourceSansPro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22A3042C1B3499C9009A3652 /* SourceSansPro-Semibold.otf */; };
 		22A7A87B1B347FA7002DCE3F /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A7A87A1B347FA7002DCE3F /* bubble.png */; };
 		BDDC10631B3476F100C371BE /* SourceSansPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDDC10611B3476F100C371BE /* SourceSansPro-Light.otf */; };
-		BDDC10641B3476F100C371BE /* SourceSansPro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDDC10621B3476F100C371BE /* SourceSansPro-Semibold.otf */; };
 		BDDD64571B33764A0008A592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDD64561B33764A0008A592 /* AppDelegate.swift */; };
 		BDDD645C1B33764A0008A592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDD645A1B33764A0008A592 /* Main.storyboard */; };
 		BDDD645E1B33764A0008A592 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDD645D1B33764A0008A592 /* Images.xcassets */; };
@@ -45,10 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22A3042C1B3499C9009A3652 /* SourceSansPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Semibold.otf"; sourceTree = "<group>"; };
 		22A7A87A1B347FA7002DCE3F /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubble.png; path = Images.xcassets/Bubble.imageset/bubble.png; sourceTree = "<group>"; };
 		BDDC10611B3476F100C371BE /* SourceSansPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.otf"; sourceTree = "<group>"; };
-		BDDC10621B3476F100C371BE /* SourceSansPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Semibold.otf"; sourceTree = "<group>"; };
-		BDDD64511B33764A0008A592 /* Digicalytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digicalytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDDD64511B33764A0008A592 /* Tadpull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tadpull.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDD64551B33764A0008A592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDDD64561B33764A0008A592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDDD645B1B33764A0008A592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		BDDD64521B33764A0008A592 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BDDD64511B33764A0008A592 /* Digicalytics.app */,
+				BDDD64511B33764A0008A592 /* Tadpull.app */,
 				BDDD64661B33764A0008A592 /* DigicalyticsTests.xctest */,
 			);
 			name = Products;
@@ -157,8 +157,8 @@
 		BDDD64541B33764A0008A592 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				22A3042C1B3499C9009A3652 /* SourceSansPro-Semibold.otf */,
 				BDDC10611B3476F100C371BE /* SourceSansPro-Light.otf */,
-				BDDC10621B3476F100C371BE /* SourceSansPro-Semibold.otf */,
 				BDDD64551B33764A0008A592 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -198,7 +198,7 @@
 			);
 			name = Digicalytics;
 			productName = Digicalytics;
-			productReference = BDDD64511B33764A0008A592 /* Digicalytics.app */;
+			productReference = BDDD64511B33764A0008A592 /* Tadpull.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BDDD64651B33764A0008A592 /* DigicalyticsTests */ = {
@@ -261,12 +261,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A3042D1B3499C9009A3652 /* SourceSansPro-Semibold.otf in Resources */,
 				22A7A87B1B347FA7002DCE3F /* bubble.png in Resources */,
 				BDDD645C1B33764A0008A592 /* Main.storyboard in Resources */,
 				BDDD64A51B33B8F70008A592 /* vwTblCell.xib in Resources */,
 				BDDD64611B33764A0008A592 /* LaunchScreen.xib in Resources */,
 				BDDC10631B3476F100C371BE /* SourceSansPro-Light.otf in Resources */,
-				BDDC10641B3476F100C371BE /* SourceSansPro-Semibold.otf in Resources */,
 				BDDD645E1B33764A0008A592 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -405,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -428,7 +428,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Digicalytics",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tadpull;
 			};
 			name = Debug;
 		};
@@ -449,7 +449,7 @@
 					"$(PROJECT_DIR)/Digicalytics",
 				);
 				"OTHER_LDFLAGS[arch=*]" = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tadpull;
 			};
 			name = Release;
 		};
