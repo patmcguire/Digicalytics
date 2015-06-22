@@ -64,7 +64,8 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clearColor()
-      
+        tableView.allowsSelection = false
+        
         self.setBackground()
 
         heightHeader.constant = 240
@@ -115,22 +116,27 @@ class TimelineScreen: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell
     }
-    
 
     //MARK: - UIButton Delegates
     
     func makeAttributed(old : NSString) -> NSMutableAttributedString {
 
 
-        let fontSize : CGFloat = 13.0;
-        let boldFont = UIFont.boldSystemFontOfSize(fontSize)
-        let regularFont = UIFont.systemFontOfSize(fontSize)
-        let foregroundColor = UIColor.blackColor()
-        let attrs = [NSFontAttributeName : boldFont, NSForegroundColorAttributeName : foregroundColor]
-        let subAttrs = [NSFontAttributeName : regularFont]
+        let fontSize : CGFloat = 16.0;
 
-        let range = old.rangeOfString(" ")
+        let regularFont = UIFont(name: "SourceSansPro-Light", size: fontSize)!
+        let boldFont = UIFont(name: "SourceSansPro-Light", size: fontSize)!
+        let foregroundColor = UIColor.grayColor()
+        let attrs = [NSFontAttributeName : regularFont, NSForegroundColorAttributeName : foregroundColor]
+        let subAttrs = [NSFontAttributeName : boldFont]
+
+        //let range = old.rangeOfString(" ")
+        let words = old.componentsSeparatedByString(" ")
+        let first = words.first as! String
+        let lengths = count(first)
         
+        let range = NSMakeRange(0, lengths)
+
         let s = NSMutableAttributedString(string: old as String, attributes: attrs)
         s.setAttributes(subAttrs, range: range)
         return s
@@ -199,7 +205,7 @@ class Button {
     let createdAt: NSDate
     let sensorIdx: Int
     init(sensorID : Int, createdAt: NSDate) {
-        self.sensorID = ["OpenDoor", "Turn On Light", "Take Medicine", "Open Cabinet"][sensorID]
+        self.sensorID = ["Open Door", "Turn On Light", "Take Medicine", "Open Cabinet"][sensorID]
         self.createdAt = createdAt
         self.sensorIdx = sensorID
     }
